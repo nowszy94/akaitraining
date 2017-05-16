@@ -1,0 +1,12 @@
+# Intellij
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Jackrabbit
+jackrabbit/
+derby.log
