@@ -4,27 +4,25 @@ import org.apache.jackrabbit.commons.JcrUtils;
 
 import javax.jcr.*;
 
-/**
- * Created by szymon.nowak on 16.05.2017.
- */
 public class Application {
     public static void main(String[] args) throws RepositoryException {
+        Session session = createConnection();
+        try {
+            simpleSave(session);
+            simpleRead(session);
+            simpleRemove(session);
+        } finally {
+            session.logout();
+        }
+    }
+
+    public static Session createConnection() throws RepositoryException {
         //Ustawiamy polaczenie z dzialajacym serwerem
         Repository repository = JcrUtils.getRepository("http://localhost:8080/server");
         //Podajemy dane do logowania
         SimpleCredentials adminCredentials = new SimpleCredentials("admin", "admin".toCharArray());
         //Logujemy się do repozytorium, workspace default
-        Session session = repository.login(adminCredentials, "default");
-        try {
-            //Tworzymy nody
-            simpleSave(session);
-            //Czytamy dane na serwerze
-            simpleRead(session);
-            //Usuwamy utworzony node
-            simpleRemove(session);
-        } finally {
-            session.logout();
-        }
+        return repository.login(adminCredentials, "default");
     }
 
     public static void simpleSave(Session session) throws RepositoryException {
