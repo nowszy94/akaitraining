@@ -1,4 +1,4 @@
-package com.cognifide.akaitraining;
+package com.cognifide.akaitraining.jcr;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;

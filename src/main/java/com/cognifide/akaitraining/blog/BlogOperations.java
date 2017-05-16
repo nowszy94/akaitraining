@@ -1,5 +1,7 @@
 package com.cognifide.akaitraining.blog;
 
+import com.cognifide.akaitraining.jcr.JcrTemplate;
+
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;

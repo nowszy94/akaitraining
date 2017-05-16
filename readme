@@ -1,1 +1,13 @@
+https://github.com/nowszy94/akaitraining
+http://ftp.piotrkosoft.net/pub/mirrors/ftp.apache.org/jackrabbit/2.14.0/jackrabbit-standalone-2.14.0.jar
 https://goo.gl/qtC7cD
+
+http://jackrabbit.apache.org/jcr/index.html
+http://jackrabbit.apache.org/jcr/first-hops.html
+
+http://localhost:8080/repository/default/
+http://localhost:8080/server/default/jcr%3aroot/hello/world.json
+
+commands
+git clone https://github.com/nowszy94/akaitraining
+java -jar jackrabbit-standalone-2.14.0.jar

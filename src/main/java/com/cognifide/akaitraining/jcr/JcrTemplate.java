@@ -1,4 +1,4 @@
-package com.cognifide.akaitraining.blog;
+package com.cognifide.akaitraining.jcr;
 
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
