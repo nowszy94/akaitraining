@@ -2,9 +2,6 @@ package com.cognifide.akaitraining.blog;
 
 import java.util.Date;
 
-/**
- * Created by szymon.nowak on 16.05.2017.
- */
 public class BlogModel {
     private String title;
     private String author;

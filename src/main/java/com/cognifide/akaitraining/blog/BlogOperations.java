@@ -5,9 +5,6 @@ import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import java.util.List;
 
-/**
- * Created by szymon.nowak on 16.05.2017.
- */
 public class BlogOperations {
     private Session session;
 

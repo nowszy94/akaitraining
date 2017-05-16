@@ -1,12 +1,8 @@
 package com.cognifide.akaitraining;
 
-import org.apache.jackrabbit.commons.JcrUtils;
 
 import javax.jcr.*;
 
-/**
- * Created by szymon.nowak on 16.05.2017.
- */
 public class Examples {
 
     public static void simpleSave(Session session) throws RepositoryException {

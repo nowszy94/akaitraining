@@ -3,9 +3,6 @@ package com.cognifide.akaitraining;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 
-/**
- * Created by szymon.nowak on 16.05.2017.
- */
 public class Utils {
 
     //JcrUtils.getStringProperty()
