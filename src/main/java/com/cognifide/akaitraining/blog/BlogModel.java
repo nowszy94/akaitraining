@@ -1,6 +1,5 @@
 package com.cognifide.akaitraining.blog;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -9,10 +8,10 @@ import java.util.Date;
 public class BlogModel {
     private String title;
     private String author;
-    private String date;
+    private Date date;
     private String content;
 
-    public BlogModel(String title, String author, String content, String date) {
+    public BlogModel(String title, String author, String content, Date date) {
         this.title = title;
         this.author = author;
         this.content = content;
@@ -20,7 +19,7 @@ public class BlogModel {
     }
 
     public BlogModel(String title, String author, String content) {
-        this(title, author, content, new SimpleDateFormat("yyyy.MM.dd").format(new Date()));
+        this(title, author, content, new Date());
     }
 
     public String getTitle() {
@@ -39,11 +38,11 @@ public class BlogModel {
         this.author = author;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

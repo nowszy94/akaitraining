@@ -3,18 +3,22 @@ package com.cognifide.akaitraining;
 import com.cognifide.akaitraining.blog.BlogOperations;
 import org.apache.jackrabbit.commons.JcrUtils;
 
-import javax.jcr.*;
+import javax.jcr.Repository;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
+import javax.jcr.SimpleCredentials;
 
 public class Application {
     public static void main(String[] args) throws RepositoryException {
-        Session session = createConnection();
-        BlogOperations blogOperations = new BlogOperations(session);
+        Session connection = createConnection();
+        BlogOperations blogOperations = new BlogOperations(connection);
         try {
             blogOperations.init();
-
+//            blogOperations.execute(session -> {
+//            });
             blogOperations.clearContent();
         } finally {
-            session.logout();
+            connection.logout();
         }
     }
 

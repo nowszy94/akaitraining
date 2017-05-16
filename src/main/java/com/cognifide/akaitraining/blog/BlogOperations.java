@@ -3,6 +3,7 @@ package com.cognifide.akaitraining.blog;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
+import java.util.List;
 
 /**
  * Created by szymon.nowak on 16.05.2017.
@@ -36,5 +37,22 @@ public class BlogOperations {
         }
     }
 
+    //Remember to switch
+    public void addBlog(String relativePath, BlogModel blogModel) {
+        //TODO
+    }
 
+    public BlogModel readBlogModel(String relativePath) {
+        //TODO
+        return null;
+    }
+
+    public List<BlogModel> getAllBlogModels() {
+        //TODO
+        return null;
+    }
+
+    public void execute(JcrTemplate jcrTemplate) throws RepositoryException {
+        jcrTemplate.doInJcr(session);
+    }
 }
