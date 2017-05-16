@@ -14,8 +14,9 @@ public class Application {
         BlogOperations blogOperations = new BlogOperations(connection);
         try {
             blogOperations.init();
-//            blogOperations.execute(session -> {
-//            });
+            blogOperations.addCategory("java");
+            blogOperations.addCategory("math");
+            blogOperations.addCategory("science");
             blogOperations.clearContent();
         } finally {
             connection.logout();

@@ -18,7 +18,17 @@ public class BlogOperations {
         try {
             Node rootNode = session.getRootNode();
             Node content = rootNode.addNode("content");
-            Node blogs = content.addNode("blogs");
+            content.addNode("blogs");
+            session.save();
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addCategory(String categoryName) {
+        try {
+            Node blogsNode = session.getRootNode().getNode("content/blogs");
+            blogsNode.addNode(categoryName);
             session.save();
         } catch (RepositoryException e) {
             e.printStackTrace();
@@ -36,17 +46,22 @@ public class BlogOperations {
         }
     }
 
-    //Remember to switch
-    public void addBlog(String relativePath, BlogModel blogModel) {
+    //Remember to switch spaces to underscore
+    public void addBlog(String categoryName, String blogName, BlogModel blogModel) {
         //TODO
     }
 
-    public BlogModel readBlogModel(String relativePath) {
+    public BlogModel getBlogModel(String categoryName, String blogName) {
         //TODO
         return null;
     }
 
     public List<BlogModel> getAllBlogModels() {
+        //TODO
+        return null;
+    }
+
+    public List<BlogModel> getAllBlogModels(String categoryName) {
         //TODO
         return null;
     }
