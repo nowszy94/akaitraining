@@ -10,3 +10,6 @@
 # Jackrabbit
 jackrabbit/
 derby.log
+
+# Maven
+target/
